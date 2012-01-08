@@ -14,7 +14,10 @@
 </ul>
 <li><a href="{% url event-list %}">Activiteiten</a></li>
 <ul>
-        <li><a href="{% url event-new  %}">Aanmaken</a></li>
+        <li><a href="{% url event-new %}">Aanmaken</a></li>
+{% if user.is_planning_manager %}
+        <li><a href="{% url planning-poollist %}">Planningbeheer</a></li>
+{% endif %}
 </ul>
 {% if "secretariaat" in user.cached_groups_names %}
 <li>Secretariaat</li>

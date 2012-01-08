@@ -784,6 +784,12 @@ class User(Entity):
             return self._data['has_unix_user']
         else:
             return True
+    @property
+    def is_planning_manager(self):
+        from kn.planning.entities import Pool
+        pools = Pool.all()
+        administrators = set(map(lambda x: x.administrator, pools))
+        return bool(self.cached_groups_names & administrators)
 
 class Tag(Entity):
     @permalink
