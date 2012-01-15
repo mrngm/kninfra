@@ -2,24 +2,24 @@
 	margin-left: 0;
 }
 
+#wrapper {
+	background-color: #000;
+}
+
 #logo {
-	height: 97px;
-	background-image: url({{ MEDIA_URL }}/base/logo.png);
-	background-repeat: no-repeat;
+	height: 40px;
+	padding: 10px 0;
 }
 
 #body {
-        float: right;
-        width: 600px;
-        margin: 0 0 0 0;
-        padding: 12px 14px 10px 0;
-        height: 511px;
-        overflow: auto;
+	float: right;
+	width: 700px;
+	margin: 0 0 0 0;
+	padding: 12px 14px 10px 0;
 }
 
-
 #menu {
-	padding: 15px 630px 0 0;
+	padding: 15px 0 0 0;
 	margin: 0 0 0 10px;
 }
 
@@ -56,9 +56,9 @@ a:hover {
 }
 
 #footer, #main {
-        border-top: 1px solid #800100;
+	border-top: 1px solid #800100;
 }
 
 small {
-        color: gray;
+	color: gray;
 }

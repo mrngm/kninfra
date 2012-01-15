@@ -4,21 +4,14 @@
 	<head>
 		{% block head %}
 		<title>{% block title %}ASV Karpe Noktem{% endblock %}</title>
-		<link href="{% url style-bare %}"
-			rel="stylesheet" type="text/css" />
-		<script type="text/javascript"
-			src="{{ MEDIA_URL }}/base/common.js"></script>
-		<script type="text/javascript"
-			src="{{ MEDIA_URL }}/base/jquery-1.6.4.min.js"></script>
-                <script type="text/javascript"
-                src="{{ MEDIA_URL }}/base/jquery-ui-1.8.16.custom.min.js">
-                </script>
-		<script type="text/javascript"
-			src="{{ MEDIA_URL }}/base/jquery.defaultText.js"></script>
+		<link href="http://karpenoktem.nl/~felix/kninfra/kn/base/templates/base/bare.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="{{ MEDIA_URL }}/base/common.js"></script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}/base/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}/base/jquery-ui-1.8.16.custom.min.js"></script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}/base/jquery.defaultText.js"></script>
 		<link rel="icon" href="{{ MEDIA_URL }}/base/favicon.ico" />
 		<!--[if lte IE 7]>
-		<link rel="stylesheet" type="text/css"
-			href="{{ MEDIA_URL }}/base/iehacks.css" />
+			<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/base/iehacks.css" />
 		<![endif]-->
 		{% endblock %}
 	</head>
@@ -41,12 +34,6 @@
 		</div>
 		{% endblock %}
 		<div id="footer">
-		<!--[if IE]>
-		Internet Explorer is 
-		<a href="http://www.google.com/search?q=ie+sucks">brak</a>.
-		Gebruik <a href="http://www.mozilla.com/en-US/firefox/">een</a>
-		open browser voor een beter resultaat.<br/>
-		<![endif]-->
 		&copy;2007&mdash;2011, Karpe Noktem
 		</div>
 	</div>

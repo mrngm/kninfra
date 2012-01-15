@@ -2,16 +2,11 @@
 
 {% block head %}
 {{ block.super }}
-<link href="{% url style-common %}"
-	rel="stylesheet" type="text/css" />
-<style type="text/css">
-        #main { background-image:
-                url({{ MEDIA_URL }}/base/bgs/rest.{{ BASE_BACKGROUND }}.jpg); }
-</style>
+<link href="http://karpenoktem.nl/~felix/kninfra/kn/base/templates/base/common.css" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block wrapper %}
-<div id="logo"></div>
+<div id="logo"><img src="http://www.karpenoktem.nl/~felix/knsite/img/logo_leden.png" /></div>
 {{ block.super }}
 {% endblock %}
 
