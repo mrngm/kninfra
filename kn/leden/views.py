@@ -514,13 +514,13 @@ def relation_end(request, _id):
     if request.user == rel['who']:
         Es.notify_informacie("%s heeft zich uitgeschreven als %s %s" % (
                         request.user.full_name,
-                        rel['how'].humanName if rel['how'] else 'lid',
+                        rel['how'].humanName.lower() if rel['how'] else 'lid',
                         rel['with'].humanName.genitive))
     else:
         # TODO (rik) leave out 'als lid'
         Es.notify_informacie("%s is geen %s meer %s" % (
                         rel['who'].humanName,
-                        rel['how'].humanName if rel['how'] else 'lid',
+                        rel['how'].humanName.lower() if rel['how'] else 'lid',
                         rel['with'].humanName.genitive))
     giedo.sync_async(request)
     return redirect_to_referer(request)
@@ -556,13 +556,13 @@ def relation_begin(request):
     if request.user._id == d['who']:
         Es.notify_informacie("%s heeft zich ingeschreven als %s %s" % (
                             request.user.full_name,
-                            Es.by_id(d['how']).humanName if d['how'] else 'lid',
+                            Es.by_id(d['how']).humanName.lower() if d['how'] else 'lid',
                             Es.by_id(d['with']).humanName.genitive))
     else:
         # TODO (rik) leave out 'als lid'
         Es.notify_informacie("%s is nu %s %s" % (
                             Es.by_id(d['who']).humanName,
-                            Es.by_id(d['how']).humanName if d['how'] else 'lid',
+                            Es.by_id(d['how']).humanName.lower() if d['how'] else 'lid',
                             Es.by_id(d['with']).humanName.genitive))
     giedo.sync_async(request)
     return redirect_to_referer(request)
