@@ -23,6 +23,7 @@ urlpatterns = patterns('',
     (r'^fotos/', include('kn.fotos.urls')),
     (r'^planning/', include('kn.planning.urls')),
     (r'^barco/', include('kn.barco.urls')),
+    (r'^r!', include('kn.redirection.urls')),
 )
 
 # vim: et:sta:bs=2:sw=4:
